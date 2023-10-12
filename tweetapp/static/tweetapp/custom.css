@@ -1,0 +1,17 @@
+.twtform {
+    border: 8px solid rgb(3, 65, 11);
+    padding-left: 10px; 
+}
+
+.twtmessage {
+    border: 8px solid rgb(30, 27, 27);
+    width: 200px;
+    height: 200px;
+    padding-left: 10px;
+}
+
+.modelform {
+    border: 8px solid rgb(22, 3, 148);
+    background-color: black;
+
+}

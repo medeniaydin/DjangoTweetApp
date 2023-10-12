@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+<div class="container">
+    <form action="" method="post">
+    {% csrf_token %}
+    
+      <div class="row"> 
+          <div class="col-md-6 mx-auto">
+              <div class="tweet-card ">
+                  <div class="tweet-box">
+                    <!--
+                      <div class="mb-3">
+                          <label for="nickname" class="form-label">NickName</label>
+                          <input type="text" class="form-control" id="nickname" name="nickname" required >
+                      </div>
+                      -->
+                      <div class="mb-3">
+                          <label for="message" class="form-label">What's happening?</label>
+                          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-primary tweet-button">Tweet</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </form>
+</div>
+
+{% endblock  %}
