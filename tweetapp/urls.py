@@ -4,10 +4,8 @@ from . import views
 app_name = 'tweetapp'
 
 urlpatterns = [
-    path("", views.listtweet, name='listtweet' ), #atilsamancioğlu.com/tweetapp/
-    path("addtweet/", views.addtweet, name="addtweet"), #atilsamancioğlu.com/tweetapp/addtweet
-    path("addtweetbyform/", views.addtweetbyform,name="addtweetbyform"),
-    path("addtweetbymodelform/", views.addtweetbymodelform, name="addtweetbymodelform"),
+    path("", views.listtweet, name='listtweet' ), 
+    path("addtweet/", views.addtweet, name="addtweet"), 
     path("signup/", views.SignUpView.as_view(), name="signup"),
     path("deletetweet/<int:id>",views.deletetweet,name="deletetweet")
 ]
