@@ -23,37 +23,6 @@ def addtweet(request):
         return redirect(reverse('tweetapp:listtweet'))
     else:
         return render(request,'tweetapp/addtweet.html')
-    
-def addtweetbyform(request):
-    if request.method == "POST":
-        form = forms.AddTweetForm(request.POST)
-        if form.is_valid():
-            nickname = form.cleaned_data["nickname_input"]
-            message = form.cleaned_data["message_input"]
-            models.Tweet.objects.create(nickname=nickname, message=message)
-            return redirect(reverse('tweetapp:listtweet'))
-        else:
-            print("error in form!")
-            return render(request,'tweetapp/addtweetbyform.html', context={"form":form})
-    else:
-        form = forms.AddTweetForm()
-        return render(request,'tweetapp/addtweetbyform.html', context={"form":form})
-
-
-def addtweetbymodelform(request):   
-    if request.method == "POST":
-        form = forms.AddTweetModelForm(request.POST)
-        if form.is_valid():
-            nickname = form.cleaned_data["nickname"]
-            message = form.cleaned_data["message"]
-            models.Tweet.objects.create(nickname=nickname, message=message)
-            return redirect(reverse('tweetapp:listtweet'))
-        else:
-            print("error in form!")
-            return render(request,'tweetapp/addtweetbymodelform.html', context={"form":form})
-    else:
-        form = forms.AddTweetModelForm()
-        return render(request,'tweetapp/addtweetbymodelform.html', context={"form":form})
 
 
 @login_required
