@@ -11,6 +11,10 @@
     
     <style>
         body {
+          min-height: 75rem;
+              padding-top: 4.5rem;
+        }
+        body {
           background-color: rgb(245, 243, 240);
             padding-bottom: 20px;
           }
@@ -166,7 +170,7 @@
 <body>
     
  
-    <nav class="navbar navbar-dark bg-dark" aria-label="Dark offcanvas navbar" tabindex="-1" style="z-index: 1500; " >
+    <nav class="navbar navbar-dark fixed-top bg-dark" aria-label="Dark offcanvas navbar" tabindex="-1" style="z-index: 1500; " >
         <div class="container-fluid">
           <a class="navbar-brand" href="{% url 'tweetapp:listtweet' %}">Tweet App</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" style="margin-right: 0px;" data-bs-target="#offcanvasNavbarDark" aria-controls="offcanvasNavbarDark" aria-label="Toggle navigation">
